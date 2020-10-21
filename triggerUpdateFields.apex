@@ -9,3 +9,12 @@ trigger AccountAddressTrigger on Account(before insert, before update){
         }
     }
 }
+
+
+/* RANDOM NOTES FOR MYSELF
+    for (Account a:Trigger.new[0]) {             to access specific record with index 0
+    a.Name = a.Name + ' Updated';                to test or change name of a record on update
+
+    Account a = new Account(Name='Test Trigger');
+    insert a;                                            to test by inserting a new record
+*/
