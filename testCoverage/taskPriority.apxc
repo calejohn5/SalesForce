@@ -1,0 +1,20 @@
+// here we only get 6/8 line coverage as our testing only covers our "else" condition
+public class TaskUtil {
+    public static String getTaskPriority(String leadState) {
+
+// 7/8 lines pass if we include an invalid parameter in our test method
+        if (String.isBlank(leadState) || leadState.length() > 2) {
+            return null;
+        }
+        
+// 8/8 lines pass if we include CA in our test method              
+        String taskPriority; 
+        if (leadState == 'CA') {
+             taskPriority = 'High'; 
+        } else {
+             taskPriority = 'Normal';
+        }
+        
+        return taskPriority;
+    }
+}

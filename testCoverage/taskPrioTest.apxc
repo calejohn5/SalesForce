@@ -1,0 +1,18 @@
+@isTest
+private class TaskUtilTest {
+    @isTest static void testTaskPriority() {
+        String pri = TaskUtil.getTaskPriority('NY');
+        System.assertEquals('Normal', pri);
+    }
+/*  eliminating these function gives us 6/8 lines or 75% coverage on our code. 
+    @isTest static void testTaskHighPriority() {
+        String pri = TaskUtil.getTaskPriority('CA');
+        System.assertEquals('High', pri);
+    }
+    
+    @isTest static void testTaskPriorityInvalid() {
+        String pri = TaskUtil.getTaskPriority('Montana');
+        System.assertEquals(null, pri);
+    }
+*/
+}
