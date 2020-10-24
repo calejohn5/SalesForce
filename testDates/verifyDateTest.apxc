@@ -1,0 +1,28 @@
+@isTest
+public class TestVerifyDate {
+    @isTest static void testCheckDates()
+    {
+// cycle through DateWithin30Days, this eventually comes out true and uses day 2
+        Date day1=system.today();
+        Date day2=system.today()+15;
+        date D=VerifyDate.CheckDates(day1,day2);
+        
+    }
+     @isTest static void testCheckDates1()
+    {
+// returns false with date2 < date1, so we SetEndOfMonthDate(date1)
+        Date day1=system.today();
+        Date day2=system.today()-5;
+        date D=VerifyDate.CheckDates(day1,day2);
+        
+    }
+     @isTest static void testCheckDates2()
+    {
+// returns false with date2 >= date30Days, setting end of month date to date1
+        Date day1=system.today();
+        Date day2=system.today()+35;        
+        date D=VerifyDate.CheckDates(day1,day2);
+        
+    }
+  
+}
