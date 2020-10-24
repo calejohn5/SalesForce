@@ -1,0 +1,17 @@
+@isTest
+public class TestRestrictContactByName {
+    @isTest static void TestDeleteAccountWithOneContact() {
+// Create a contact who's last name is INVALIDNAME
+        Contact cont = new Contact(LastName='INVALIDNAME');
+// test it in our try catch block
+        Test.startTest();
+            try
+            {
+                insert cont;
+            }
+            catch(Exception ee)
+            {
+            }
+        Test.stopTest(); 
+    }
+}
