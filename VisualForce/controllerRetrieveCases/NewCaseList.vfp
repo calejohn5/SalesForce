@@ -1,0 +1,15 @@
+<!--
+This is my VF page that uses a custom controller to call my function to retrieve new cases
+-->
+<!-- Call our newly created controller -->
+<apex:page controller="NewCaseListController">
+    <apex:pageBlock title="Case List">
+<!-- use apex:repeat to itterate our list, using newCases to call our function -->
+		<apex:repeat value="{! newCases }" var="case">
+			<li>
+ <!-- Use case var t to output our case number whos case ID fields of status are new -->
+				<apex:outputLink value="/{!Case.id}">{!Case.CaseNumber}</apex:outputLink>
+			</li>
+		</apex:repeat>
+	</apex:pageBlock>
+</apex:page>
