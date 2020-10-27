@@ -1,4 +1,4 @@
-<!--  -->
+<!-- Just messing around, using standard controller -->
 <apex:page standardController="Account">
     <apex:pageBlock title="Account Summary">
         <apex:pageBlockSection >
