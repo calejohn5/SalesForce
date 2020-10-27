@@ -1,5 +1,3 @@
-# This is currently where all of my Salesforce related code will end up
-
 ## Comments at the top of each file explain the functionality 
 
 ## There are comments throughout the code I wrote to better help myself understand what is going on, and for my own reference if I need to solve a similar problem.
