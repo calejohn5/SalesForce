@@ -1,0 +1,12 @@
+<!---->
+<!--tile displays an individual item within the list within the selector-->
+<!--displays the name and image-->
+<template>
+    <div class="container">
+<!--this right here chains an event listener to selector and back down to detail-->
+        <a onclick={tileClick}>
+            <div class="title">{product.fields.Name.value}</div>
+            <img class="product-img" src={product.fields.Picture_URL__c.value}></img>
+        </a>
+    </div>
+</template>
