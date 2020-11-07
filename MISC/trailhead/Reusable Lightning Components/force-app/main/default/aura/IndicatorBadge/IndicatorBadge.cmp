@@ -1,0 +1,5 @@
+<!-- Seperate component to fill our indicators with individual badges. Add styles that match badge color field -->
+<aura:component >
+  <aura:attribute name="badge" type="Object" />
+  <lightning:icon iconName="{!v.badge.icon}" class="{! 'slds-box slds-box_x-small slds-align_absolute-center slds-size__1-of-1 '+v.badge.color}" alternativeText="{!v.badge.label}" />
+</aura:component>
