@@ -1,0 +1,13 @@
+<template>
+    <div class="container">
+        <span class="slds-text-heading_label">{todoName}</span> 
+        <!-- When this button is clicked, it updates the component by calling apex method updateTodo, 
+            once it gets the response it fires custom event which is listened by parent component.
+            parent component then refreshes the list from the server using updateTodo 
+        -->
+        <lightning-button-icon icon-name={iconName} class="slds-p-horizontal_medium" onclick={updateHandler} title="Update Todo"> <!-- check mark if completed/add if not -->
+        </lightning-button-icon>
+        <lightning-button-icon icon-name="utility:delete" onclick={deleteHandler} title="delete Todo">
+        </lightning-button-icon>
+    </div>
+</template>
