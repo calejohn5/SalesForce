@@ -82,11 +82,11 @@ export default class ToDoManager extends LightningElement {
     }
     setGreeting(hour){ // set our greeting depending on hour
         if (hour < 12){
-            this.greeting = "good morning";
+            this.greeting = "morning";
         } else if(hour >= 12 && hour < 17) {
-            this.greeting = "good afternoon";
+            this.greeting = "afternoon";
         } else { 
-            this.greeting = "good evening";
+            this.greeting = "evening";
         }
     }
 }

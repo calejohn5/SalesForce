@@ -44,6 +44,6 @@ export default class ToDoItem extends LightningElement {
 
 // change display of first button depending if task is complete or not
   get iconName(){
-    return this.done ? "utility:check" : "utility:add"; 
+    return this.done ? "utility:chevronup" : "utility:chevrondown"; 
   }
 }
