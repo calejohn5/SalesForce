@@ -1,7 +1,6 @@
 import { LightningElement, track } from 'lwc';
 import addTodo from '@salesforce/apex/ToDoController.addTodo';
 import getCurrentTodos from '@salesforce/apex/ToDoController.getCurrentTodos';
-getCurrentTodos
 export default class ToDoManager extends LightningElement {
 // make properties reactive for our HTML file >>>>> UPDATE I learned all private properties are reactive and these don't really need @track
     @ track time = "10:10 AM";
@@ -35,7 +34,7 @@ export default class ToDoManager extends LightningElement {
         inputBox.value = "";
     }
 
-// use apex method to display all todos in DB
+// use apex method to display all todos
     fetchTodos(){
         getCurrentTodos().then(result => { 
             if(result){  // is true

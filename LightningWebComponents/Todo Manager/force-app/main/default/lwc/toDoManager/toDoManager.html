@@ -6,11 +6,9 @@
         <lightning-layout-item size="12">
             <div class="greetings">{greeting}</div>
         </lightning-layout-item>
-
         <lightning-layout-item size="12">
             <div class="slds-text-heading_large slds-m-vertical_large">What is your task today?</div>
         </lightning-layout-item>
-
         <!-- Input box-->
         <lightning-layout-item size="12" small-device-size="12" large-device-size="6" medium-device-size="10" class="slds-m-top_large">
             <lightning-layout>
@@ -24,22 +22,18 @@
                 </lightning-layout-item>
             </lightning-layout>
         </lightning-layout-item>
-
         <!-- Upcoming tasks-->
         <lightning-layout-item size="12">
             <div>Upcoming</div>
             <template for:each={upcomingTasks} for:item="todo">
-                <!-- call handlers from child component, use c-to-do-item and reference parent event to child handler as such {updateHandler}-->
+                <!-- iterate each task, assign properties for each-->
                 <c-to-do-item key={todo.todoId} todo-id={todo.todoId} todo-name={todo.todoName} onupdate={updateHandler} ondelete={deleteHandler}></c-to-do-item>
-            </template>
-            
+            </template>         
             <!-- completed tasks-->
             <div>Completed</div>
             <template for:each={completedTasks} for:item="todo">
                 <c-to-do-item key={todo.todoId} todo-id={todo.todoId} todo-name={todo.todoName} done onupdate={updateHandler} ondelete={deleteHandler}></c-to-do-item>
-
             </template>
         </lightning-layout-item>
-
     </lightning-layout>
 </template>
