@@ -1,16 +1,23 @@
 .container {
-    background-color:white;
+    background-color:#F9CDAD;
     padding: 16px;
     max-height: 480px;
-    overflow-y: scroll;
     display:block;
+    border:  #83AF9B;
+    border-style: ridge;
+    border-radius: 5px;
 }
 .time {
     font-size: 4rem;
     font-weight: 600;
+    color: #83AF9B;
 }
 
-.greeting {
-    font-size: 2rem;
+.main {
+    font-size: 1rem;
     font-weight: 400;
+}
+.textInput{
+    color: #83AF9B;
+    font-weight: bold;
 }

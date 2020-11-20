@@ -33,7 +33,6 @@ export default class ToDoManager extends LightningElement {
         //this.todos.push(todo);
         inputBox.value = "";
     }
-
 // use apex method to display all todos
     fetchTodos(){
         getCurrentTodos().then(result => { 
@@ -62,7 +61,6 @@ export default class ToDoManager extends LightningElement {
         ? this.todos.filter(todo => todo.done) 
         : [];
     }
-
 ///////////////////  TIME & GREETING ///////////////////////////
     getTime(){
         const date = new Date();

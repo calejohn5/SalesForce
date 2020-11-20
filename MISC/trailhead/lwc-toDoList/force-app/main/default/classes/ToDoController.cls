@@ -13,7 +13,7 @@ public class ToDoController {
   
       return String.valueOf(todo.Id);
     }
-  
+    
     //Update an item
     //Accepts serialized ToDo object
     @AuraEnabled
@@ -27,7 +27,7 @@ public class ToDoController {
   
       update todo;
     }
-  
+
     //Delete an item
     //Accepts id of the item to delete
     @AuraEnabled
@@ -37,7 +37,7 @@ public class ToDoController {
   
       delete todo;
     }
-  
+
     //Get all todos for last 7 days
     //The method is cacheable, means the response will cached in the browser
     @AuraEnabled(cacheable=true)
@@ -45,10 +45,9 @@ public class ToDoController {
       List<SObject> todos = Database.query(
         'SELECT Id, Name, CreatedDate, Done__c FROM ToDo__c WHERE CreatedDate = LAST_N_DAYS:7 ORDER BY CreatedDate DESC'
       );
-  
       return getToDos(todos);
     }
-  
+
     //Get all todos for today
     @AuraEnabled
     public static List<ToDo> getCurrentTodos() {
@@ -57,7 +56,7 @@ public class ToDoController {
       );
       return getToDos(todos);
     }
-  
+
     //Wrap ToDo__c SObject into ToDo object
     public static List<ToDo> getToDos(List<SObject> objs) {
       List<ToDo> todos = new List<ToDo>();
@@ -69,10 +68,9 @@ public class ToDoController {
         todo.done = Boolean.valueOf(obj.get('Done__c'));
         todos.add(todo);
       }
-  
       return todos;
     }
-  
+
     // Everything from our LWC is converted to this ToDo object
     public class ToDo {
       @AuraEnabled
